@@ -1,0 +1,71 @@
+body {
+  background: #f0f0f0;
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 20px;
+  font-size: 13px;
+
+  color: rgb(2, 2, 2);
+}
+img{
+  width: 10rem;
+  border-radius: 60%;
+  border-style:double;
+}
+.incomplete/*education*/{
+  font-weight: bold;
+  font-style: italic;
+}
+#work .date{
+  font-size: small;
+  font-style: italic;
+}
+#education .date{
+  font-size: small;
+  font-style: italic
+
+}
+.title{
+  background-color: #999; 
+  margin: 0;
+  padding: 7px;
+  
+}
+h1 {
+  font-size: 300%;
+}
+h2 {
+  font-size: 210%;
+}
+h3 {
+  font-size: 130%;
+}
+
+ul {
+  margin:0;
+  list-style-type: square;
+}
+a {
+  color: rgb(36, 13, 164);
+}
+
+#credit {
+  margin-top: 1rem;
+  font-size: 10px;
+  color: #999;
+  text-align: center;
+}
+/* ________________________________________________________ */
+
+#main {
+  background: rgb(253, 251, 251);
+  width: 900px;
+  padding: 30px;
+  margin: auto;
+  box-shadow: 0.5px 1px 10px 2px rgb(148, 186, 213);
+}
+
+/*  _____________________________ */
+
