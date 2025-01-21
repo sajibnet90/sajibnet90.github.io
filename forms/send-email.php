@@ -7,8 +7,13 @@ require '../PHPMailer/src/Exception.php';
 require '../PHPMailer/src/PHPMailer.php';
 require '../PHPMailer/src/SMTP.php';
 
-// Replace with your real receiving email address
-$receiving_email_address = 'sajibnet@gmail.com';
+// Get environment variables set in Render.com server
+$smtpHost = getenv('SMTP_HOST');
+$smtpPort = getenv('SMTP_PORT');
+$smtpUsername = getenv('SMTP_USERNAME');
+$smtpPassword = getenv('SMTP_PASSWORD');
+$receivingEmailAddress = getenv('RECEIVING_EMAIL_ADDRESS');
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = strip_tags(trim($_POST["name"]));
@@ -27,12 +32,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Server settings
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
+        $mail->Host = $smtpHost;
         $mail->SMTPAuth = true;
-        $mail->Username = 'sajibnet@gmail.com'; // Your Gmail address
-        $mail->Password = 'tvuw jxim gjir itzj'; // Your Gmail app password
+        $mail->Username = $smtpUsername;
+        $mail->Password = $smtpPassword;
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = 587;
+        $mail->Port = $smtpPort;
 
         // Recipients
         $mail->setFrom($email, $name);
