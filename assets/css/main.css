@@ -1160,3 +1160,23 @@ section,
 .swiper-button-prev:hover {
   background: rgba(0, 0, 0, 0.7);
 }
+
+
+/* Add this to your CSS file error */
+.loading {
+  display: none;
+}
+
+.error-message {
+  display: none;
+  color: red;
+}
+
+.sent-message {
+  display: none;
+  color: green;
+}
+
+.d-block {
+  display: block;
+}

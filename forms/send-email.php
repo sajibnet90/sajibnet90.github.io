@@ -1,4 +1,3 @@
-<!-- filepath: /Users/ahsanProM3/Downloads/iPortfolio/forms/send-email.php -->
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -41,13 +40,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Recipients
         $mail->setFrom($email, $name);
-        $mail->addAddress($receiving_email_address);
+        $mail->addAddress($receivingEmailAddress);
 
         // Content
+        //$mail->SMTPDebug = 2; // Enable verbose debug output
+        //$mail->Debugoutput = 'html'; // Output format for debugging
         $mail->isHTML(true);
         $mail->Subject = $subject;
-        $mail->Body = nl2br($message);
-        $mail->AltBody = $message;
+        $mail->Body = nl2br("Name: $name\nEmail: $email\nSubject: $subject\nMessage: $message");
+        $mail->AltBody = "Name: $name\nEmail: $email\nSubject: $subject\nMessage: $message";
+
 
         $mail->send();
         http_response_code(200);

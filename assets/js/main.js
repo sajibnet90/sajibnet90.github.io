@@ -306,9 +306,11 @@ document.addEventListener('DOMContentLoaded', function() {
       portfolioImages.appendChild(div);
     });
 
-    initSwiper(); // Initialize Swiper after loading content
-  } else {
-    document.getElementById('project-title').innerText = 'Project Not Found';
-    document.getElementById('project-description').innerText = 'The project you are looking for does not exist.';
-  }
+    // initSwiper(); // Initialize Swiper after loading content
+  } 
+  // else {
+  //   document.getElementById('project-title').innerText = 'Project Not Found';
+  //   document.getElementById('project-description').innerText = 'The project you are looking for does not exist.';
+  // }
 });
+
