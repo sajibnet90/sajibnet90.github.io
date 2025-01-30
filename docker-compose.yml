@@ -7,15 +7,9 @@ services:
       dockerfile: Dockerfile
     container_name: web
     ports:
-      - "8080:80"
+      - "80:80"
     volumes:
       - .:/var/www/html
     env_file:
       - .env
-
-# .env
-# SMTP_HOST=smtp.gmail.com
-# SMTP_PORT=587
-# SMTP_USERNAME=sajibnet@gmail.com
-# SMTP_PASSWORD=your-secret-password
-# RECEIVING_EMAIL_ADDRESS=reciveing email@gmail.com
+    restart: always
